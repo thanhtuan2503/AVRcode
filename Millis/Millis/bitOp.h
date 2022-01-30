@@ -1,0 +1,48 @@
+/*
+ * bitOp.h
+ *
+ * Created: 12/2/2019 11:48:39 PM
+ *  Author: Asus
+ */ 
+
+
+#ifndef INCFILE1_H_
+#define INCFILE1_H_
+
+
+#define SET_BIT_0(REG) REG |= 0b00000001
+#define SET_BIT_1(REG) REG |= 0b00000010
+#define SET_BIT_2(REG) REG |= 0b00000100
+#define SET_BIT_3(REG) REG |= 0b00001000
+#define SET_BIT_4(REG) REG |= 0b00010000
+#define SET_BIT_5(REG) REG |= 0b00100000
+#define SET_BIT_6(REG) REG |= 0b01000000
+#define SET_BIT_7(REG) REG |= 0b10000000
+#define SET(REG, NO) SET_BIT_##NO (REG)
+
+#define CLEAR_BIT_0(REG) REG &= (0b11111110)
+#define CLEAR_BIT_1(REG) REG &= (0b11111101)
+#define CLEAR_BIT_2(REG) REG &= (0b11111011)
+#define CLEAR_BIT_3(REG) REG &= (0b11110111)
+#define CLEAR_BIT_4(REG) REG &= (0b11101111)
+#define CLEAR_BIT_5(REG) REG &= (0b11011111)
+#define CLEAR_BIT_6(REG) REG &= (0b10111111)
+#define CLEAR_BIT_7(REG) REG &= (0b01111111)
+#define CLR(REG, NO) CLEAR_BIT_##NO (REG)
+
+#define INVERT_BIT_0(REG) REG ^= (0b00000001)
+#define INVERT_BIT_1(REG) REG ^= (0b00000010)
+#define INVERT_BIT_2(REG) REG ^= (0b00000100)
+#define INVERT_BIT_3(REG) REG ^= (0b00001000)
+#define INVERT_BIT_4(REG) REG ^= (0b00010000)
+#define INVERT_BIT_5(REG) REG ^= (0b00100000)
+#define INVERT_BIT_6(REG) REG ^= (0b01000000)
+#define INVERT_BIT_7(REG) REG ^= (0b10000000)
+#define INV(REG, NO) INVERT_BIT_##NO (REG)
+
+
+
+
+
+
+#endif /* INCFILE1_H_ */

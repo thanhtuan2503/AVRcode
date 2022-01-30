@@ -25,12 +25,7 @@ void setupServo(){
 	ICR1 = 65535;
 	CLR(PRR0, 3);
 	// TIMER3 FOR MAIN LOOP
-	TCCR3A = 0; TCCR3B = 0;
-	TCCR3B |= (1 << WGM32) | (1 << CS32) | (1 << CS30);
-	TIMSK3 = 0;
-	TCNT3 = 0;
-	OCR3A = 46875;
-	CLR(PRR1, 3);
+	
 	
 	sei();	
 }
